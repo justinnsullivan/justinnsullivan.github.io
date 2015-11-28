@@ -130,7 +130,7 @@ img.me{
 	font-family: 'Josefin Sans', serif;
 	cursor: pointer;
 	font-size: 24px;
-	color: #bab8b1;
+	color: #ffbd5f;
 	text-decoration: none;
 }
 
@@ -142,7 +142,7 @@ img.me{
 .nav.nav-pills li a:hover{
 	font-family: 'Josefin Sans', serif;
 	font-size: 24px;
-	color: #ffbd5f;
+	color: #bab8b1;
 	cursor: pointer;
 	background-color: white;
 	text-decoration: none;
@@ -228,12 +228,28 @@ $(document).ready(function() {
 	});
 });
 
-function toRes(){
-	scrollTo();
+function scroll(id){
+	if(id =="res"){
+		scrollToRes();
+	}
+	else if(id == "about"){
+		scrollToAbout();
+	}
+	else if(id == "con"){
+		scrollToCon();
+	}
 }
 
-function scrollTo() {
+function scrollToRes() {
     $('html, body').animate({ scrollTop: $('#resume').offset().top }, 'slow');
+    return false;
+}
+function scrollToAbout() {
+    $('html, body').animate({ scrollTop: $('#about').offset().top }, 'slow');
+    return false;
+}
+function scrollToCon() {
+    $('html, body').animate({ scrollTop: $('#contact').offset().top }, 'slow');
     return false;
 }
 </script>
@@ -257,11 +273,21 @@ function scrollTo() {
 		          </button>
 		        </div>
 			    <ul class="nav nav-pills">
-	  				<li><a href="#">About</a></li>
-	  				<li><a onclick="toRes()">Resume</a></li>
-	  				<li><a href="#">Contact</a></li>
+	  				<li><a onclick="scroll('about')">About.</a></li>
+	  				<li><a onclick="scroll('res')">Resume.</a></li>
+	  				<li><a onclick="scroll('con')">Contact.</a></li>
 				</ul>
 			</nav>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-md-12" id="about">
+		<div class="row">
+			<div class="col-md-2"></div>
+			<div class= "col-md-8" style="margin-top:4%; margin-bottom:7%;">
+				<p class="job-label" style="font-size:78px"> Justin Noah Sullivan <p>
+				<p class="job-label" style="font-size:20px;color: #ffbd5f">And sir dare view but over man. So at within mr to simple assure. Mr disposing continued it offending arranging in we. Extremity as if breakfast agreement. Off now mistress provided out horrible opinions. Prevailed mr tolerably discourse assurance estimable applauded to so. Him everything melancholy uncommonly but solicitude inhabiting projection off. Connection stimulated estimating excellence an to impression. Why end might ask civil again spoil. </p>
 			</div>
 		</div>
 	</div>
@@ -323,8 +349,8 @@ function scrollTo() {
 							<div style="width:50%; height:100%; float: left;">
 								<div style="height: 25%;"></div>
 								<img style="display:block; margin:auto; width: 250px; height: 85px;" src="tl.png">
-								<p class="job-label">Solutions Engineering Intern
-								<span class="job-label dates">May 2015 - August 2015</span></p>
+								<p class="job-label">Solutions Engineering Intern</p>
+								<p class="job-label dates">May 2015 - August 2015</p>
 							</div>
 							<div style="width:50%; height:100%; background-color: #f2673a; display:inline-block; float: right;">
 								<div style="height: 25%"></div>
@@ -341,8 +367,8 @@ function scrollTo() {
 								<div style="height: 22px"></div>
 								<img style="display:block; margin:auto; width: 250px; height: 40px;" src="jet.png">
 								<div style="height: 23px"></div>
-								<p class="job-label">Summer Travel Associate
-								<span class="job-label dates">May 2014 - August 2014</span></p>
+								<p class="job-label">Summer Travel Associate</p>
+								<p class="job-label dates">May 2014 - August 2014</p>
 							</div>
 							<div style="width:50%; height:100%; background-color: #009aff; display:inline-block; float: right;">
 								<div style="height: 25%"></div>
