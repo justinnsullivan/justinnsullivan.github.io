@@ -4,20 +4,221 @@
 
 <head>
 	<title>Justin Sullivan</title>
-	<link rel="stylesheet" type="text/css" href="style1.css">
+	<!-- <link rel="stylesheet" type="text/css" href="style1.css"> -->
+  	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<!-- Important Owl stylesheet -->
+	<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+	<!-- Default Theme -->
+	<link rel="stylesheet" href="owl-carousel/owl.theme.css">
+	<!--  jQuery 1.7+  -->
+	<script src="owl-carousel/owl.carousel.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
 </head>
 
+<style>
+
+body{
+	background-color: white;
+}
+
+.job-label{
+    font-family: 'Josefin Sans', serif;
+    font-size: 24px;
+    text-align: center;
+    color: #bab8b1;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.dates{
+	font-size: 16px;
+	font-style: italic;
+}
+
+.tl{
+	font-size: 20px;
+	margin-left: 4px;
+	margin-right: 4px;
+	text-align: left;
+	color: #59595c;
+}
+
+.jet{
+	font-size: 20px;
+	margin-left: 4px;
+	margin-right: 4px;
+	text-align: left;
+	color: white;
+}
+
+a{	
+	font-family: 'Josefin Sans', serif;
+	font-size: 20px;
+	color: black;
+	text-decoration: none;
+}
+
+
+a:hover{
+	color: #878583;
+}
+.center {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+img.me{
+	vertical-align: middle;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-align: center;
+	width: 75%;
+	height: 75%;
+} 
+
+.container.full-width {
+  width: auto;
+}
+.nav.nav-pills li{
+	width:30%;
+}
+.nav.nav-pills li a{
+	font-family: 'Josefin Sans', serif;
+	font-size: 24px;
+	color: #bab8b1;
+	text-decoration: none;
+}
+
+.navbar {
+	background-color: white;
+	border-color: white;
+}
+
+.nav.nav-pills li a:hover{
+	font-family: 'Josefin Sans', serif;
+	font-size: 24px;
+	color: #ffbd5f;
+	background-color: white;
+	text-decoration: none;
+}
+.nav {
+    padding-left: 40px;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+#owl-demo .owl-item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+</style>
+
+<script>
+$(document).ready(function() {
+ 
+  // $("#owl-example").owlCarousel();
+	$("#owl-demo").owlCarousel({
+	    slideSpeed : 300,
+	    navigation : false,
+	    paginationSpeed : 400,
+	    singleItem:true
+  	});
+ 
+});
+
+$('html, body').animate({
+    scrollTop: $("#target-element").offset().top
+}, 1000);
+
+$('a[href^="#"]').on('click', function(event) {
+    var target = $(this.href);
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+});
+
+</script>
 
 <body>
-	<p class="top">Justin Sullivan</p>
-	<figure>
-		<img class="me" src="me.jpg" alt="Me" width="600" height="600">
-			<figcaption>
-				<a href="resume.html">Resume &ensp;</a>
-				<a href="bio.html">Biography &ensp;</a>
-				<a href="https://github.com/justinnsullivan">Github &ensp;</a>
-			</figcaption>
-	</figure> 
+	<!-- <div style="height: 50px;"></div> -->
+	<div > 
+		<div class="col-md-1"></div> 
+		<div class="col-md-10" style="text-align: center; verticle-align: middle;">
+			<img class="me" src="here2.png"><br>
+		<div class="col-md-2"></div>
+		<div class="col-md-8">
+			<div class="container full-width">
+			<nav class="navbar navbar-default">
+			    <div class="navbar-header">
+	          		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-secondary">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		          </button>
+		        </div>
+			    <ul class="nav nav-pills">
+	  				<li><a href="#">About</a></li>
+	  				<li><a href="#resume">Resume</a></li>
+	  				<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="col-md-2"></div>
+	<div id="resume" class="col-md-8" style="width=100% height=auto; border-width: 5px; border-color:#bab8b1;">
+		<div style="width=100% height=auto">
+			<div id="owl-demo" class="owl-carousel">
+				<div style=" width: 100%; height: 300px;">
+					<div style="width:50%; height:100%; float: left;">
+						<div style="height: 25%;"></div>
+						<img style="display:block; margin:auto; width: 250px; height: 85px;" src="tl.png">
+						<p class="job-label">Solutions Engineering Intern
+						<p class="job-label dates">May 2015 - August 2015<p></p>
+					</div>
+					<div style="width:50%; height:100%; background-color: #f2673a; display:inline-block; float: right;">
+						<div style="height: 25%"></div>
+						<ul>
+							<li class="job-label tl">Liason between business and engineering teams</li>
+							<li class="job-label tl">Created various internal tools for tracking marketing metrics, placement location and publisher availibility</li>
+							<li class="job-label tl">Considered "full time employee"</li>
+						</ul>
+					</div>
+				</div>
+				<div style="width: 100%; height: 300px;">
+					<div style="width:50%; height:100%; float: left;">
+						<div style="height: 25%"></div>
+						<div style="height: 22px"></div>
+						<img style="display:block; margin:auto; width: 250px; height: 40px;" src="jet.png">
+						<div style="height: 23px"></div>
+						<p class="job-label">Summer Travel Associate
+						<p class="job-label dates">May 2014 - August 2014<p></p>
+					</div>
+					<div style="width:50%; height:100%; background-color: #009aff; display:inline-block; float: right;">
+						<div style="height: 25%"></div>
+						<ul>
+							<li class="job-label jet">UX testing across browsers and devices</li>
+							<li class="job-label jet">Negotiated and booked travel and room packages with international luxury properties and clients</li>
+							<li class="job-label jet">Primary author of the Jetaport Blog"</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div> 
+	</div>
+
 
 
 </body>
