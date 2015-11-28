@@ -23,8 +23,15 @@ body{
 	background-color: white;
 }
 
+p{
+	font-family: 'Josefin Sans', serif;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #bab8b1;
+}
+
 .job-label{
-    font-family: 'Josefin Sans', serif;
+	font-family: 'Josefin Sans', serif;
     font-size: 24px;
     text-align: center;
     color: #bab8b1;
@@ -45,12 +52,45 @@ body{
 	color: #59595c;
 }
 
+.college-label{
+	font-size: 24px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+	text-align: center;
+}
+
+.college{
+	font-size: 20px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	text-align: center;
+}
+
 .jet{
 	font-size: 20px;
 	margin-left: 4px;
 	margin-right: 4px;
 	text-align: left;
 	color: white;
+}
+
+.res-item{
+	cursor: pointer;
+	margin-bottom: 20px;
+	max-width: 100%;
+	max-height: 10%;
+}
+#down-button{
+	font-size: 125px;
+	margin-left: 20%;
+	color: #b8f49a;
+}
+#down-text{
+	float:right; 
+	margin-top:10%;
+	margin-left:7px;
+	font-size: 36px;
+    margin-bottom: 0px;
 }
 
 a{	
@@ -88,6 +128,7 @@ img.me{
 }
 .nav.nav-pills li a{
 	font-family: 'Josefin Sans', serif;
+	cursor: pointer;
 	font-size: 24px;
 	color: #bab8b1;
 	text-decoration: none;
@@ -102,6 +143,7 @@ img.me{
 	font-family: 'Josefin Sans', serif;
 	font-size: 24px;
 	color: #ffbd5f;
+	cursor: pointer;
 	background-color: white;
 	text-decoration: none;
 }
@@ -121,36 +163,84 @@ img.me{
 
 <script>
 $(document).ready(function() {
- 
-  // $("#owl-example").owlCarousel();
+ 	$("#education").hide();
+ 	$("#standouts").hide();
+ 	$("#download").hide();
+
 	$("#owl-demo").owlCarousel({
 	    slideSpeed : 300,
 	    navigation : false,
 	    paginationSpeed : 400,
 	    singleItem:true
   	});
- 
+
+  	$( ".res-item" ).click(function() {
+  		var id = $(this).attr('id');
+		// var id = "Hey!";
+		if(id =='edu'){
+			if ($("#education").is(":visible")) {
+				$("#education").slideUp();
+			}
+			else{
+				$("#education").slideDown();
+			}
+		}
+		if(id =='stand'){
+			if ($("#standouts").is(":visible")) {
+				$("#standouts").slideUp();
+			}
+			else{
+				$("#standouts").slideDown();
+			}
+		}
+		if(id =='down'){
+			if ($("#download").is(":visible")) {
+				$("#download").slideUp();
+			}
+			else{
+				$("#download").slideDown();
+			}
+		}
+	});
+
+	$('#pingry').hover(
+		function () {
+			$('#pingry-text').slideDown();
+		}, 
+		function () {
+			$('#pingry-text').slideUp();
+	});
+
+	$('#tufts').hover(
+		function () {
+			$('#tufts-text').slideDown();
+		}, 
+		function () {
+			$('#tufts-text').slideUp();
+	});
+
+	$('#alcala').hover(
+		function () {
+			$('#alcala-text').slideDown();
+		}, 
+		function () {
+			$('#alcala-text').slideUp();
+	});
 });
 
-$('html, body').animate({
-    scrollTop: $("#target-element").offset().top
-}, 1000);
+function toRes(){
+	scrollTo();
+}
 
-$('a[href^="#"]').on('click', function(event) {
-    var target = $(this.href);
-    if( target.length ) {
-        event.preventDefault();
-        $('html, body').animate({
-            scrollTop: target.offset().top
-        }, 1000);
-    }
-});
-
+function scrollTo() {
+    $('html, body').animate({ scrollTop: $('#resume').offset().top }, 'slow');
+    return false;
+}
 </script>
 
 <body>
 	<!-- <div style="height: 50px;"></div> -->
-	<div > 
+	<div> 
 		<div class="col-md-1"></div> 
 		<div class="col-md-10" style="text-align: center; verticle-align: middle;">
 			<img class="me" src="here2.png"><br>
@@ -168,7 +258,7 @@ $('a[href^="#"]').on('click', function(event) {
 		        </div>
 			    <ul class="nav nav-pills">
 	  				<li><a href="#">About</a></li>
-	  				<li><a href="#resume">Resume</a></li>
+	  				<li><a onclick="toRes()">Resume</a></li>
 	  				<li><a href="#">Contact</a></li>
 				</ul>
 			</nav>
@@ -176,47 +266,113 @@ $('a[href^="#"]').on('click', function(event) {
 		</div>
 	</div>
 
-
-	<div class="col-md-2"></div>
-	<div id="resume" class="col-md-8" style="width=100% height=auto; border-width: 5px; border-color:#bab8b1;">
-		<div style="width=100% height=auto">
-			<div id="owl-demo" class="owl-carousel">
-				<div style=" width: 100%; height: 300px;">
-					<div style="width:50%; height:100%; float: left;">
-						<div style="height: 25%;"></div>
-						<img style="display:block; margin:auto; width: 250px; height: 85px;" src="tl.png">
-						<p class="job-label">Solutions Engineering Intern
-						<p class="job-label dates">May 2015 - August 2015<p></p>
-					</div>
-					<div style="width:50%; height:100%; background-color: #f2673a; display:inline-block; float: right;">
-						<div style="height: 25%"></div>
-						<ul>
-							<li class="job-label tl">Liason between business and engineering teams</li>
-							<li class="job-label tl">Created various internal tools for tracking marketing metrics, placement location and publisher availibility</li>
-							<li class="job-label tl">Considered "full time employee"</li>
-						</ul>
-					</div>
-				</div>
-				<div style="width: 100%; height: 300px;">
-					<div style="width:50%; height:100%; float: left;">
-						<div style="height: 25%"></div>
-						<div style="height: 22px"></div>
-						<img style="display:block; margin:auto; width: 250px; height: 40px;" src="jet.png">
-						<div style="height: 23px"></div>
-						<p class="job-label">Summer Travel Associate
-						<p class="job-label dates">May 2014 - August 2014<p></p>
-					</div>
-					<div style="width:50%; height:100%; background-color: #009aff; display:inline-block; float: right;">
-						<div style="height: 25%"></div>
-						<ul>
-							<li class="job-label jet">UX testing across browsers and devices</li>
-							<li class="job-label jet">Negotiated and booked travel and room packages with international luxury properties and clients</li>
-							<li class="job-label jet">Primary author of the Jetaport Blog"</li>
-						</ul>
-					</div>
+	<div class="col-md-12" id="resume">
+		<div class="row" id"ed-link">
+			<div class="col-md-2"></div>
+			<div class= "col-md-8">
+				<img class="res-item" id="edu" src="education.png">
+			</div>
+		<br>
+		</div>
+		<div class="row" id="education" style="margin-bottom:20px;">
+			<div class="col-md-2"></div>
+			<div class="col-md-2">
+				<img id="pingry" style="display:block; margin:auto; width: 125px; height:125px;" src="pingry-logo.png">
+				<div id="pingry-text" style="display: none;">
+					<p class="college-label"> The Pingry School </p>
+					<p class="college"> Class of 2013 </p>
+					<p class="college" style="font-style:italic;"> High School </p>
+					<p class="college" style="font-style:italic;"> 4 yr. Varsity Football</p>
 				</div>
 			</div>
-		</div> 
+			<div class="col-md-4">
+				<img id="tufts" style="display:block; margin:auto; width: 125px; height:125px;" src="tufts-logo.png">
+				<div id="tufts-text" style="display: none;">
+					<p class="college-label"> Tufts University </p>
+					<p class="college"> Class of 2017 </p>
+					<p class="college" style="font-style:italic;"> B.S. in Computer Science </p>
+					<p class="college" style="font-style:italic;"> Minor in English </p>
+				</div>
+			</div>
+			<div class="col-md-2">
+				<img id="alcala" style="display:block; margin:auto; width: 125px; height:125px;" src="alca-logo.png">
+				<div id="alcala-text" style="display: none;">
+					<p class="college-label" style="font-size: 22px">Alcala University</p>
+					<p class="college"> Abroad Fall 2015</p>
+					<p class="college" style="font-style:italic;"> Study Abrod in Madrid </p>
+					<p class="college" style="font-style:italic;"> Coursework | Internship </p>
+				</div>
+			</div>
+			<div class="col-md-2"></div>
+			<div style="width=100%; height:20px;"></div>
+		</div>
+	
+		<div class="row" id"stand-link">
+			<div class="col-md-2"></div>
+			<div class= "col-md-8">
+				<img class="res-item" id="stand" src="standouts.png">
+			</div>
+		<br>
+		</div>
+		<div class="row" id="standouts">
+			<div class="col-md-2"></div>
+			<div id="standouts" class="col-md-8" style="width=100% height=auto; border-width: 5px; border-color:#bab8b1;">
+				<div style="width=100% height=auto">
+					<div id="owl-demo" class="owl-carousel">
+						<div style=" width: 100%; height: 300px;">
+							<div style="width:50%; height:100%; float: left;">
+								<div style="height: 25%;"></div>
+								<img style="display:block; margin:auto; width: 250px; height: 85px;" src="tl.png">
+								<p class="job-label">Solutions Engineering Intern
+								<span class="job-label dates">May 2015 - August 2015</span></p>
+							</div>
+							<div style="width:50%; height:100%; background-color: #f2673a; display:inline-block; float: right;">
+								<div style="height: 25%"></div>
+								<ul>
+									<li class="job-label tl">Liason between business and engineering teams</li>
+									<li class="job-label tl">Created various internal tools for tracking marketing metrics, placement location and publisher availibility</li>
+									<li class="job-label tl">Considered "full time employee"</li>
+								</ul>
+							</div>
+						</div>
+						<div style="width: 100%; height: 300px;">
+							<div style="width:50%; height:100%; float: left;">
+								<div style="height: 25%;"></div>
+								<div style="height: 22px"></div>
+								<img style="display:block; margin:auto; width: 250px; height: 40px;" src="jet.png">
+								<div style="height: 23px"></div>
+								<p class="job-label">Summer Travel Associate
+								<span class="job-label dates">May 2014 - August 2014</span></p>
+							</div>
+							<div style="width:50%; height:100%; background-color: #009aff; display:inline-block; float: right;">
+								<div style="height: 25%"></div>
+								<ul>
+									<li class="job-label jet">UX testing across browsers and devices</li>
+									<li class="job-label jet">Negotiated and booked travel and room packages with international luxury properties and clients</li>
+									<li class="job-label jet">Primary author of the Jetaport Blog"</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div> 
+			</div>
+		</div>
+		<div class="row" id"down-link">
+			<div class="col-md-2"></div>
+			<div class= "col-md-8">
+				<img class="res-item" id="down" src="download.png">
+			</div>
+		<br>
+		</div>
+		<div class="row" id="download">
+			<div class="col-md-2"></div>
+			<div class= "col-md-8">
+				<a href="#">
+					<span id="down-button" class="glyphicon glyphicon-download" aria-hidden="true">
+					<p id="down-text"> Download Justin's Resume </p>
+				</a>
+			</div>
+		</div>
 	</div>
 
 
