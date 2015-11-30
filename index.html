@@ -1,304 +1,160 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
 
-<html>
+    <title>Justin Sullivan</title>
 
-<head>
-	<title>Justin Sullivan</title>
-	<!-- <link rel="stylesheet" type="text/css" href="style1.css"> -->
-  	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <!--  BOOTSTRAP  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+    <!--  JQUERY  -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<!-- Important Owl stylesheet -->
+
+	<!-- OWL CAROUSEL LINKS -->
 	<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
-	<!-- Default Theme -->
 	<link rel="stylesheet" href="owl-carousel/owl.theme.css">
-	<!--  jQuery 1.7+  -->
 	<script src="owl-carousel/owl.carousel.js"></script>
-	<link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300' rel='stylesheet' type='text/css'>
-</head>
 
-<style>
+    <!-- TEMPLATE CSS -->
+    <link href="css/main.css" rel="stylesheet">
 
-body{
-	background-color: white;
-}
+    <!-- STRETCHY NAV -->
+    <link rel="stylesheet" href="stretchy-navigation/css/reset.css"> <!-- CSS reset -->
+	<link rel="stylesheet" href="stretchy-navigation/css/style.css"> <!-- Resource style -->
 
-p{
-	font-family: 'Josefin Sans', serif;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    color: #bab8b1;
-}
+	<!-- FONTS -->
+    <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:300,700' rel='stylesheet' type='text/css'>
 
-.job-label{
-	font-family: 'Josefin Sans', serif;
-    font-size: 24px;
-    text-align: center;
-    color: #bab8b1;
-    margin-top: 0px;
-    margin-bottom: 0px;
-}
+  </head>
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+		
 
-.dates{
-	font-size: 16px;
-	font-style: italic;
-}
+	<header>
+		<nav class="cd-stretchy-nav">
+			<a class="cd-nav-trigger" href="#0">
+				<span aria-hidden="true"></span>
+			</a>
 
-.tl{
-	font-size: 20px;
-	margin-left: 4px;
-	margin-right: 4px;
-	text-align: left;
-	color: #59595c;
-}
+			<ul id="stretchy-list">
+				<li><a href="#headerwrap" class="smoothScroll"><span>Home</span><span class="glyphicon glyphicon-home"
+				style=" float: right; color:white; font-size:25px;  margin-top: -40px; margin-right: -58px;"></span></a></li>
+				<li><a href="#about" class="smoothScroll"><span>About</span>
+				<span class="glyphicon glyphicon-user"
+				style=" float: right; color:white; font-size:25px;  margin-top: -40px; margin-right: -58px;"></span></a></li>
+				<li><a href="#resume" class="smoothScroll"><span>Resume</span>
+				<span class="glyphicon glyphicon-briefcase"
+				style=" float: right; color:white; font-size:25px;  margin-top: -40px; margin-right: -58px;"></span></a></li>
+				<li><a href="#contact" class="smoothScroll"><span>Contact</span>
+				<span class="glyphicon glyphicon-envelope"
+				style=" float: right; color:white; font-size:25px;  margin-top: -40px; margin-right: -58px;"></span></a></li>
+			</ul>
 
-.college-label{
-	font-size: 24px;
-	margin-top: 4px;
-	margin-bottom: 4px;
-	text-align: center;
-}
+			<span aria-hidden="true" class="stretchy-nav-bg"></span>
+		</nav>
+	</header>
 
-.college{
-	font-size: 20px;
-	margin-top: 0px;
-	margin-bottom: 0px;
-	text-align: center;
-}
-
-.jet{
-	font-size: 20px;
-	margin-left: 4px;
-	margin-right: 4px;
-	text-align: left;
-	color: white;
-}
-
-.res-item{
-	cursor: pointer;
-	margin-bottom: 20px;
-	max-width: 100%;
-	max-height: 10%;
-}
-.social{
-	height:75px;
-	width: 75px; 
-	display:block;
-	margin:auto;
-}
-#down-button{
-	font-size: 125px;
-	margin-left: 20%;
-	color: #b8f49a;
-}
-#down-text{
-	float:right; 
-	margin-top:10%;
-	margin-left:7px;
-	font-size: 36px;
-    margin-bottom: 0px;
-}
-
-a{	
-	font-family: 'Josefin Sans', serif;
-	font-size: 20px;
-	color: black;
-	text-decoration: none;
-}
-
-
-a:hover{
-	color: #878583;
-}
-.center {
-    float: none;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-img.me{
-	vertical-align: middle;
-	margin-top: 40px;
-	margin-bottom: 40px;
-	text-align: center;
-	width: 75%;
-	height: 75%;
-} 
-
-.container.full-width {
-  width: auto;
-}
-.nav.nav-pills li{
-	width:30%;
-}
-.nav.nav-pills li a{
-	font-family: 'Josefin Sans', serif;
-	cursor: pointer;
-	font-size: 24px;
-	color: #ffbd5f;
-	text-decoration: none;
-}
-
-.navbar {
-	background-color: white;
-	border-color: white;
-}
-
-.nav.nav-pills li a:hover{
-	font-family: 'Josefin Sans', serif;
-	font-size: 24px;
-	color: #bab8b1;
-	cursor: pointer;
-	background-color: white;
-	text-decoration: none;
-}
-.nav {
-    padding-left: 40px;
-    margin-bottom: 0;
-    list-style: none;
-}
-
-#owl-demo .owl-item img{
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-</style>
-
-<script>
-$(document).ready(function() {
- 	$("#education").hide();
- 	$("#standouts").hide();
- 	$("#download").hide();
-
-	$("#owl-demo").owlCarousel({
-	    slideSpeed : 300,
-	    navigation : false,
-	    paginationSpeed : 400,
-	    singleItem:true
-  	});
-
-  	$( ".res-item" ).click(function() {
-  		var id = $(this).attr('id');
-		// var id = "Hey!";
-		if(id =='edu'){
-			if ($("#education").is(":visible")) {
-				$("#education").slideUp();
-			}
-			else{
-				$("#education").slideDown();
-			}
-		}
-		if(id =='stand'){
-			if ($("#standouts").is(":visible")) {
-				$("#standouts").slideUp();
-			}
-			else{
-				$("#standouts").slideDown();
-			}
-		}
-		if(id =='down'){
-			if ($("#download").is(":visible")) {
-				$("#download").slideUp();
-			}
-			else{
-				$("#download").slideDown();
-			}
-		}
-	});
-
-	$('#pingry').hover(
-		function () {
-			$('#pingry-text').slideDown();
-		}, 
-		function () {
-			$('#pingry-text').slideUp();
-	});
-
-	$('#tufts').hover(
-		function () {
-			$('#tufts-text').slideDown();
-		}, 
-		function () {
-			$('#tufts-text').slideUp();
-	});
-
-	$('#alcala').hover(
-		function () {
-			$('#alcala-text').slideDown();
-		}, 
-		function () {
-			$('#alcala-text').slideUp();
-	});
-});
-
-function scroll(id){
-	if(id =="res"){
-		scrollToRes();
-	}
-	else if(id == "about"){
-		scrollToAbout();
-	}
-	else if(id == "con"){
-		scrollToCon();
-	}
-}
-
-function scrollToRes() {
-    $('html, body').animate({ scrollTop: $('#resume').offset().top }, 'slow');
-    return false;
-}
-function scrollToAbout() {
-    $('html, body').animate({ scrollTop: $('#about').offset().top }, 'slow');
-    return false;
-}
-function scrollToCon() {
-    $('html, body').animate({ scrollTop: $('#contact').offset().top }, 'slow');
-    return false;
-}
-</script>
-
-<body>
-	<!-- <div style="height: 50px;"></div> -->
-	<div> 
-		<div class="col-md-1"></div> 
-		<div class="col-md-10" style="text-align: center; verticle-align: middle;">
-			<img class="me" src="here2.png"><br>
-		<div class="col-md-2"></div>
-		<div class="col-md-8">
-			<div class="container full-width">
-			<nav class="navbar navbar-default">
-			    <div class="navbar-header">
-	          		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-secondary">
-		            <span class="sr-only">Toggle navigation</span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		            <span class="icon-bar"></span>
-		          </button>
-		        </div>
-			    <ul class="nav nav-pills">
-	  				<li><a onclick="scroll('about')">About.</a></li>
-	  				<li><a onclick="scroll('res')">Resume.</a></li>
-	  				<li><a onclick="scroll('con')">Contact.</a></li>
-				</ul>
-			</nav>
+	
+	<!-- ========== OPEN SECTION ========== -->
+	<div id="headerwrap" style="background:white;">
+		<div class="container">
+			<br>
+			<div class="row">
+				<img class="me" src="here2.png"><br>
+				<br>
+				<br>
+				<br>
+				<div class="col-lg-6 col-lg-offset-3">
+				</div>
 			</div>
-		</div>
-	</div>
-
-	<div class="col-md-12" id="about">
+		</div><!-- /container -->
+	</div><!-- /headerwrap -->
+	
+	
+	
+	<!-- ========== ABOUT SECTION ========== -->
+	<div class="col-md-12" id="about" style="background-color: #ffbd5f">
 		<div class="row">
 			<div class="col-md-2"></div>
-			<div class= "col-md-8" style="margin-top:4%; margin-bottom:7%;">
-				<p class="job-label" style="font-size:78px"> Justin Noah Sullivan <p>
-				<p class="job-label" style="font-size:20px;color: #ffbd5f">And sir dare view but over man. So at within mr to simple assure. Mr disposing continued it offending arranging in we. Extremity as if breakfast agreement. Off now mistress provided out horrible opinions. Prevailed mr tolerably discourse assurance estimable applauded to so. Him everything melancholy uncommonly but solicitude inhabiting projection off. Connection stimulated estimating excellence an to impression. Why end might ask civil again spoil. </p>
+			<div class= "col-md-8" style="margin-top:7%; margin-bottom:7%;">
+				<!-- <p class="job-label" style="font-size:78px;"> Justin Noah Sullivan <p> -->
+					<img src="justin.png" style="display:block; margin:auto; width:auto;">
+					<i class="fa fa-envelope fa-5"></i>
+				<p class="job-label" style="font-size:25px;color: white; margin-top:4%;">And sir dare view but over man. So at within mr to simple assure. Mr disposing continued it offending arranging in we. Extremity as if breakfast agreement. Off now mistress provided out horrible opinions. Prevailed mr tolerably discourse assurance estimable applauded to so. Him everything melancholy uncommonly but solicitude inhabiting projection off. Connection stimulated estimating excellence an to impression. Why end might ask civil again spoil. </p>
 			</div>
 		</div>
 	</div>
 
-	<div class="col-md-12" id="resume">
+	<!-- ========== RESUME SECTION ========== -->
+	<div class="col-md-12" id="resume" style="background-color:white">
+		<div class="row" id"exper-link" style="margin-top:7%">
+			<div class="col-md-2"></div>
+			<div class= "col-md-8">
+				<img class="res-item" id="exper" src="experience.png">
+			</div>
+		<br>
+		</div>
+		<div class="row extend" id="experience" style="display: none;">
+			<div class="col-md-2"></div>
+			<div style="width=100% height=auto; border-width: 5px; border-color:#bab8b1;"> 
+				<div id="experience" class="col-md-8">
+					<div style="width=100% height=auto">
+						<div id="owl-demo" class="owl-carousel">
+							<div style=" width: 100%; height: 300px;">
+								<div style="width:50%; height:100%; float: left;">
+									<div style="height: 25%;"></div>
+									<img style="display:block; margin:auto; width: 250px; height: 85px;" src="tl.png">
+									<p class="job-label">Solutions Engineering Intern</p>
+									<p class="job-label dates">May 2015 - August 2015</p>
+								</div>
+								<div style="width:50%; height:100%; background-color: #f2673a; display:inline-block; float: right;">
+									<div style="height: 25%"></div>
+									<ul>
+										<li class="job-label tl">Liason between business and engineering teams</li>
+										<li class="job-label tl">Created various internal tools for tracking marketing metrics, placement location and publisher availibility</li>
+										<li class="job-label tl">Considered "full time employee"</li>
+									</ul>
+								</div>
+							</div>
+							<div style="width: 100%; height: 300px;">
+								<div style="width:50%; height:100%; float: left;">
+									<div style="height: 25%;"></div>
+									<div style="height: 22px"></div>
+									<img style="display:block; margin:auto; width: 250px; height: 40px;" src="jet.png">
+									<div style="height: 23px"></div>
+									<p class="job-label">Summer Travel Associate</p>
+									<p class="job-label dates">May 2014 - August 2014</p>
+								</div>
+								<div style="width:50%; height:100%; background-color: #009aff; display:inline-block; float: right;">
+									<div style="height: 25%"></div>
+									<ul>
+										<li class="job-label jet">UX testing across browsers and devices</li>
+										<li class="job-label jet"> Improved on app interface with creation of customer concierge with automated text messaging</li>
+										<li class="job-label jet">Primary author of the Jetaport Blog"</li>
+									</ul>
+								</div>
+							</div>
+							<div style="width: 100%; height: 300px;">
+								<div style="width:50%; height:100%; float: left;">
+									<div style="height: 10%;"></div>
+									<img style="display:block; margin:auto; width: 130px; height: 130px;" src="lp.png">
+									<p class="job-label">Summer Intern</p>
+									<p class="job-label dates">June 2013 - August 2013</p>
+								</div>
+								<div style="width:50%; height:100%; background-color: #971726; display:inline-block; float: right;">
+									<div style="height: 25%"></div>
+									<ul>
+										<li class="job-label jet">Sole intern at Laundry and Dry Cleaning Service Startup</li>
+										<li class="job-label jet"> Improved on app interface with creation of customer concierge with automated text messaging</li>
+										<li class="job-label jet">Designed website using Strikingly</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div> 
+				</div>
+			</div>
+		</div>
 		<div class="row" id"ed-link">
 			<div class="col-md-2"></div>
 			<div class= "col-md-8">
@@ -306,7 +162,7 @@ function scrollToCon() {
 			</div>
 		<br>
 		</div>
-		<div class="row" id="education" style="margin-bottom:20px;">
+		<div class="row extend" id="education" style="margin-bottom:20px; display: none;">
 			<div class="col-md-2"></div>
 			<div class="col-md-2">
 				<img id="pingry" style="display:block; margin:auto; width: 125px; height:125px;" src="pingry-logo.png">
@@ -346,75 +202,7 @@ function scrollToCon() {
 			</div>
 		<br>
 		</div>
-		<div class="row" id="standouts">
-			<div class="col-md-2"></div>
-			<div style="width=100% height=auto; border-width: 5px; border-color:#bab8b1;"> 
-			<div id="standouts" class="col-md-8" >
-				<div style="width=100% height=auto">
-					<div id="owl-demo" class="owl-carousel">
-						<div style=" width: 100%; height: 300px;">
-							<div style="width:50%; height:100%; float: left;">
-								<div style="height: 25%;"></div>
-								<img style="display:block; margin:auto; width: 250px; height: 85px;" src="tl.png">
-								<p class="job-label">Solutions Engineering Intern</p>
-								<p class="job-label dates">May 2015 - August 2015</p>
-							</div>
-							<div style="width:50%; height:100%; background-color: #f2673a; display:inline-block; float: right;">
-								<div style="height: 25%"></div>
-								<ul>
-									<li class="job-label tl">Liason between business and engineering teams</li>
-									<li class="job-label tl">Created various internal tools for tracking marketing metrics, placement location and publisher availibility</li>
-									<li class="job-label tl">Considered "full time employee"</li>
-								</ul>
-							</div>
-						</div>
-						<div style="width: 100%; height: 300px;">
-							<div style="width:50%; height:100%; float: left;">
-								<div style="height: 25%;"></div>
-								<div style="height: 22px"></div>
-								<img style="display:block; margin:auto; width: 250px; height: 40px;" src="jet.png">
-								<div style="height: 23px"></div>
-								<p class="job-label">Summer Travel Associate</p>
-								<p class="job-label dates">May 2014 - August 2014</p>
-							</div>
-							<div style="width:50%; height:100%; background-color: #009aff; display:inline-block; float: right;">
-								<div style="height: 25%"></div>
-								<ul>
-									<li class="job-label jet">UX testing across browsers and devices</li>
-									<li class="job-label jet"> Improved on app interface with creation of customer concierge with automated text messaging</li>
-									<li class="job-label jet">Primary author of the Jetaport Blog"</li>
-								</ul>
-							</div>
-						</div>
-						<div style="width: 100%; height: 300px;">
-							<div style="width:50%; height:100%; float: left;">
-								<div style="height: 10%;"></div>
-								<img style="display:block; margin:auto; width: 130px; height: 130px;" src="lp.png">
-								<p class="job-label">Summer Intern</p>
-								<p class="job-label dates">June 2013 - August 2013</p>
-							</div>
-							<div style="width:50%; height:100%; background-color: #971726; display:inline-block; float: right;">
-								<div style="height: 25%"></div>
-								<ul>
-									<li class="job-label jet">Sole intern at Laundry and Dry Cleaning Service Startup</li>
-									<li class="job-label jet"> Improved on app interface with creation of customer concierge with automated text messaging</li>
-									<li class="job-label jet">Designed website using Strikingly</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div> 
-			</div>
-			</div>
-		</div>
-		<div class="row" id"down-link">
-			<div class="col-md-2"></div>
-			<div class= "col-md-8">
-				<img class="res-item" id="down" src="download.png">
-			</div>
-		<br>
-		</div>
-		<div class="row" id="download">
+		<!-- <div class="row extend" id="download" style="display: none;">
 			<div class="col-md-2"></div>
 			<div class= "col-md-8">
 				<a href="#">
@@ -422,13 +210,101 @@ function scrollToCon() {
 					<p id="down-text"> Download Justin's Resume </p>
 				</a>
 			</div>
-		</div>
+		</div> -->
+		<div class="row extend" id="standouts" style="display: none;">
+			<div class="col-md-12">
+				<div class="col-md-2"></div>
+				<div class="col-md-8 main-chart">
+	            	<div class="mt">
+	                    <div class="col-md-3">
+	                  		<div class="skill-panel-a pn">
+	                  			<p>C++ / C</p>
+	                  		</div>
+	                  	</div><!-- /col-md-4 -->
+	                  	<div class="col-md-3">
+	                  		<div class="skill-panel-b pn">
+	                  			<p>Javascript</p>
+	                  		</div>
+	                  	</div><!-- /col-md-4 -->
+	                  	<div class="col-md-3">
+	                  		<div class="skill-panel-a pn">
+	                  			<p>jQuery</p>
+	                  		</div>
+	                  	</div><!-- /col-md-4 -->
+	                  	<div class="col-md-3">
+	                  		<div class="skill-panel-b pn">
+	                  			<p>PHP</p>
+	                  		</div>
+	                  	</div><!-- /col-md-4 -->
+                	</div><!-- /row -->
+             	</div><!-- /col-md-8 END SECTION MIDDLE -->
+            </div>
+            <div class="col-md-12">
+				<div class="col-md-2"></div>
+				<div class="col-md-8 main-chart">
+	            	<div class="mt">
+	                    <div class="col-md-3">
+	                  		<div class="skill-panel-b pn">
+	                  			<p>MYSQL</p>
+	                  		</div>
+	                  	</div><!-- /col-md-4 -->
+	                  	<div class="col-md-3">
+	                  		<div class="skill-panel-a pn">
+	                  			<p>HTML</p>
+	                  		</div>
+	                  	</div><!-- /col-md-4 -->
+	                  	<div class="col-md-3">
+	                  		<div class="skill-panel-b pn">
+	                  			<p>CSS</p>
+	                  		</div>
+	                  	</div><!-- /col-md-4 -->
+	                  	<div class="col-md-3">
+	                  		<div class="skill-panel-a pn">
+	                  			<p>MongoDB</p>
+	                  		</div>
+	                  	</div><!-- /col-md-4 -->
+                	</div><!-- /row -->
+             	</div><!-- /col-md-8 END SECTION MIDDLE -->
+            </div>
+            <div class="col-md-12">
+				<div class="col-md-2"></div>
+				<div class="col-md-8 main-chart">
+	            	<div class="mt">
+	                    <div class="col-md-3">
+	                  		<div class="skill-panel-a pn">
+	                  			<p>Salesforce</p>
+	                  		</div>
+	                  	</div><!-- /col-md-4 -->
+	                  	<div class="col-md-3">
+	                  		<div class="skill-panel-b pn">
+	                  			<p style="padding-top:20%">Professional Proficiency in Spanish</p>
+	                  		</div>
+	                  	</div><!-- /col-md-4 -->
+	                  	<div class="col-md-3">
+	                  		<div class="skill-panel-a pn">
+	                  			<p>Photoshop</p>
+	                  		</div>
+	                  	</div><!-- /col-md-4 -->
+	                  	<div class="col-md-3">
+	                  		<div class="skill-panel-b pn">
+	                  			<p>Blogging</p>
+	                  		</div>
+	                  	</div><!-- /col-md-4 -->
+                	</div><!-- /row -->
+             	</div><!-- /col-md-8 END SECTION MIDDLE -->
+            </div>
+        </div>
+		<div style="margin-bottom:5%;"></div>
 	</div>
-	<div class="col-md-12" id="contact" style="margin-top:6%; margin-bottom:7%">
+	
+
+	<!-- ========== CONTACT SECTION ========== -->
+	<div class="col-md-12" id="contact" style="margin-top:6%; background-color: #525251;">
 		<div class="row">
 			<div class="col-md-2"></div>
-			<div class="col-md-8">
-				<p class="job-label" style="font-size:78px; margin-bottom:10px"> Contact. <p>
+			<div class="col-md-8" >
+				<!-- <p class="job-label" style="font-size:78px; margin-top:5%; margin-bottom:5%; color: #ffbd5f"> Contact Me <p> -->
+				<img src="contact.png" style="display:block; margin-left:auto; margin-right:auto; margin-top:5%; margin-bottom:5%; height:64px; width:auto;">
 				<div class="col-sm-3">
 					<a href="https://www.linkedin.com/in/justin-sullivan-4a929889" target="_blank"><img class="social" src="link.png"></a>
 				</div>
@@ -436,7 +312,7 @@ function scrollToCon() {
 					<a href="https://github.com/justinnsullivan" target="_blank" ><img class="social" src="git.png"></a>
 				</div>
 				<div class="col-sm-3">
-					<a href="mailto:justinnsulliavn@gmail.com" target="_blank"><img class="social" src="mail.png"></a>
+					<a href="mailto:justinnsullivan@gmail.com" target="_blank"><img class="social" src="mail.png"></a>
 				</div>
 				<div class="col-sm-3">
 					<a href="tel://1-908-812-1119" target="_blank"><img class="social" src="phone.png"></a>
@@ -444,10 +320,87 @@ function scrollToCon() {
 			</div>
 			<div class="col-md-2"></div>
 		</div>
+		<div class="row" style="margin-bottom:7%;">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<p class="job-label" style="font-size:25px;color: white; margin-top:4%;">
+					245 East 25th Street, 9C
+				</p>
+				<p class="job-label" style="font-size:25px;color: white;">
+					New York, New York 10003
+				</p>
+			</div>
 	</div>
 
+	
 
+<script>
+	$(document).ready(function() {
 
+		$("#owl-demo").owlCarousel({
+		    slideSpeed : 300,
+		    navigation : false,
+		    paginationSpeed : 400,
+		    singleItem:true
+	  	});
+
+	  	$( ".res-item" ).click(function() {
+	  		var id = $(this).attr('id');
+			// var id = "Hey!";
+			if(id =='edu'){
+				if ($("#education").is(":visible")) {
+					$("#education").slideUp();
+				}
+				else{
+					$("#education").slideDown();
+				}
+			}
+			if(id =='exper'){
+				if ($("#experience").is(":visible")) {
+					$("#experience").slideUp();
+				}
+				else{
+					$("#experience").slideDown();
+				}
+			}
+			if(id =='stand'){
+				if ($("#standouts").is(":visible")) {
+					$("#standouts").slideUp();
+				}
+				else{
+					$("#standouts").slideDown();
+				}
+			}
+		});
+
+		$('#pingry').hover(
+			function () {
+				$('#pingry-text').slideDown();
+			}, 
+			function () {
+				$('#pingry-text').slideUp();
+		});
+
+		$('#tufts').hover(
+			function () {
+				$('#tufts-text').slideDown();
+			}, 
+			function () {
+				$('#tufts-text').slideUp();
+		});
+
+		$('#alcala').hover(
+			function () {
+				$('#alcala-text').slideDown();
+			}, 
+			function () {
+				$('#alcala-text').slideUp();
+		});
+	});
+
+</script>
+	
+    <script src="js/smoothscroll.js"></script>
+    <script src="stretchy-navigation/js/main.js"></script>
 </body>
-
 </html>
