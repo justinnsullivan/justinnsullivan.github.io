@@ -23,41 +23,60 @@ PANELS CONFIGURATIONS
 		box-shadow: 2px 3px 2px rgba(0, 0, 0, 0.3);
 		
 	}
-
-	/*White Panel */
-	.skill-panel-a {
+	.skill-panel{
 		text-align: center;
 		display: block;
 		background: #ffbd5f;
-		color: white;
 		margin-bottom: 4%;
 	}
 
-	.skill-panel-a p {
-		font-family: 'Josefin Sans', serif;
+	/*White Panel */
+	.or {
+		background: #ffbd5f;
 		color:white;
-		padding-top:35%;
-		font-size: 32px;
-		margin-top: auto;
-		font-weight: 700;
 	}
-
-	.skill-panel-b {
-		text-align: center;
-		display: block;
+ 	.gr{
 		background: #bab8b1;
-		color: white;
-		margin-bottom: 4%;
+		color:white;
+	}
+	.libl{
+		background: #a5e4ed;
+		color:white;
+	}
+	.bl{
+		background: #417dc0;
+		color:white;
 	}
 
-	.skill-panel-b p {
+	.skill-panel p {
 		font-family: 'Josefin Sans', serif;
-		color: #ffbd5f;
-		padding-top:35%;
-		font-size: 32px;
-		margin-top: auto;
-		font-weight: 700;
+		font-size: 28px;
+    	text-align: center;
+		font-weight: 300;
 	}
+
+	.single{
+		padding-top: 40%;
+	}
+	.pan-single{
+		padding-top: 36%;
+	}
+	.double{
+		padding-top: 29%;
+	}
+	.triple{
+		padding-top: 21%;
+	}
+	.quad{
+		padding-top: 14%;
+	}
+
+	/*.skill-panel .or p{
+		color:white;
+	}
+	.skill-panel .gr p{
+		color:#ffbd5f;
+	}*/
 
 	body{
 		background-color: white;
@@ -67,7 +86,6 @@ PANELS CONFIGURATIONS
 		font-family: 'Josefin Sans', serif;
 	    margin-top: 0px;
 	    margin-bottom: 0px;
-	    color: #bab8b1;
 	}
 
 	.job-label{
@@ -97,9 +115,10 @@ PANELS CONFIGURATIONS
 
 	.college-label{
 		font-family: 'Josefin Sans', serif;
-		font-size: 24px;
-		margin-top: 4px;
-		margin-bottom: 4px;
+		font-size: 32px;
+		/*margin-top: 2%;*/
+		margin-bottom: 1%;
+		color: #417dc0;
 		text-align: center;
 	}
 
@@ -107,7 +126,7 @@ PANELS CONFIGURATIONS
 		font-family: 'Josefin Sans', serif;
 		font-size: 20px;
 		margin-top: 0px;
-		margin-bottom: 0px;
+		margin-bottom: 4px;
 		text-align: center;
 	}
 
@@ -164,6 +183,30 @@ PANELS CONFIGURATIONS
 	    margin-left: auto;
 	    margin-right: auto;
 
+	}
+
+	.school-box{
+		height:100%; 
+		margin-left:2%
+	}
+
+	.school-logo{
+	    display: block;
+	    margin-top: 10%;
+	    width: auto;
+	    height: auto;
+	}
+
+	#school-intial{
+		/*color: #cfefee; */
+		color:white;
+		margin-top: 25%;
+		margin-bottom: 28%;
+		font-size: 36px;
+	}
+	#box-initial{
+		background-color: #a5e4ed;
+		color: white;
 	}
 
 	img.me{
