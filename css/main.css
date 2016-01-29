@@ -154,9 +154,11 @@ PANELS CONFIGURATIONS
 		margin:auto;
 	}
 	#down-button{
-		font-size: 125px;
-		margin-left: 20%;
-		color: #b8f49a;
+		display:block;
+		margin-top:17%;
+		font-size: 150px;
+		text-align: center;
+		color: white;
 	}
 	#down-text{
 		font-family: 'Josefin Sans', serif;
