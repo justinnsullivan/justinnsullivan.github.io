@@ -1,0 +1,28 @@
+// ==========================================================================
+// Schools
+// ==========================================================================
+
+// Logo
+
+.school {
+	cursor: pointer;
+	@include mq(large) {
+		height:100px;
+		width:100px;
+	}
+	@include mq(small) {
+		height:50px;
+		width:50px;
+		margin-left: em(5px);
+	}
+}
+
+.overlay {
+  background-color: $tufts;
+	width:100%;
+	text-align: center;
+	float:left !important;
+	@include e(head) {
+		font-size: 36px;
+	}
+}

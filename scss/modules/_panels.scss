@@ -1,0 +1,39 @@
+// ==========================================================================
+// Buttons
+// ==========================================================================
+
+.panel {
+  @include bg-colors($ui-colors);
+  @include e(label) {
+    font-size: 28px;
+  	font-weight: 300;
+  }
+}
+
+[class^="panel--"] {
+  @extend %panel;
+  @include mq(small) {
+    height:75px;
+    width:75px;
+  }
+  @include mq(medium) {
+    height:100px;
+    width:100px;
+  }
+  @include mq(large) {
+    height:150px;
+    width:150px;
+  }
+}
+
+[class^="panel__"]{
+  @include mq(small) {
+    font-size:16px;
+  }
+  @include mq(medium) {
+    font-size:20px;
+  }
+  @include mq(large) {
+    font-size:28px;
+  }
+}
