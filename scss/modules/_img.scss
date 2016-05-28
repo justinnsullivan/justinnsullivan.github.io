@@ -14,32 +14,32 @@
         margin-top: em(24px);
     }
     @include m(hero) {
-      @include mq(large) {
-        padding-top: em(60px);
-        padding-bottom: em(60px);
-        margin: 0;
-      }
-      @include mq(small) {
-        padding-top: em(20px);
-        padding-bottom: em(20px);
-        margin: 0;
-        padding-left: em(10px);
-        padding-right: em(10px);
-      }
-      @include mq(medium) {
-        padding-top: em(40px);
-        padding-bottom: em(40px);
-        margin:0;
-      }
-
-
+         @include mq(large){
+            padding-top: em(60px);
+            padding-bottom: em(60px);
+            margin: 0;
+        }
+        @include mq(small) {
+            padding-top: em(20px);
+            padding-bottom: em(20px);
+            margin: 0;
+            padding-left: em(10px);
+            padding-right: em(10px);
+        }
+        @include mq(medium) {
+            padding-top: em(40px);
+            padding-bottom: em(40px);
+            margin: 0;
+        }
     }
     @include m(banner) {
-        margin-bottom: 3vh;
+        margin-bottom: 4vh;
+        height: 28vh;
         cursor: pointer;
         @include m(first) {
-            margin-top: 3vh;
-            margin-bottom: 3vh;
+            height: 28vh;
+            margin-top: 4vh;
+            margin-bottom: 4vh;
             cursor: pointer;
         }
     }
@@ -54,13 +54,12 @@
         width: 70px;
         margin-top: 20px;
         @include mq(small) {
-
-          width: 40px;
-          height: 40px;
+            width: 40px;
+            height: 40px;
         }
     }
     @include m(job) {
-         @include m(triple){
+         @include m(triple) {
             width: 250px;
             height: 85px;
         }
@@ -72,6 +71,16 @@
             width: 130px;
             height: 130px;
         }
+    }
+    @include m(hobby) {
+      @include mq(medium) {
+        margin: 0 em(14px) em(20px) em(14px);
+        width:130px;
+        height:130px;
+      }
+      @include mq(small) {
+        display: none;
+      }
     }
 }
 [class^="img--job"] {

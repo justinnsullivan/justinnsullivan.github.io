@@ -40,7 +40,8 @@
   @include flex-dir(column);
   @include flex-wrap(wrap);
   @include align-items(center);
-  @include justify-content(space-around);
+  @include justify-content(center);
+  justify-content: center;
 }
 .flexed-3{
   @extend %flexbox;
@@ -50,4 +51,14 @@
   @extend %flexbox;
   @include flex-dir(column);
   @include justify-content(center);
+}
+.flexed-5{
+    height: 100%;
+    @extend %flexbox;
+    @include flex-dir(column);
+    @include flex-wrap(wrap);
+    @include align-items(center);
+    @include justify-content(center);
+    justify-content: center;
+
 }

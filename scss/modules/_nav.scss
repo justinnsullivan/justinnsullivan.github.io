@@ -1,61 +1,72 @@
 // ==========================================================================
 // Navigation
 // ==========================================================================
-
 .nav {
-  height: 100vh;
-  width:6.5%;
-  background-color: palette(gray,xx-dark);
-  left:0;
-  top:0;
-  position: fixed;
-  @include mq(small) {
-    display: -webkit-box;
-  	display: -webkit-flex;
-  	display: -moz-flex;
-  	display: -ms-flexbox;
-  	display: flex;
-    @include flex-dir(row);
-    @include align-items(center);
-    height:10%;
-    width:100%;
-  };
-  @include e(link) {
-    @extend .flexed-nav;
-    cursor: pointer;
-    &:hover{
-      background: palette(gray,dark);
+    height: 100vh;
+    width: 6.5%;
+    background-color: palette(gray,light);
+    left: 0;
+    top: 0;
+    position: fixed;
+    @include mq(small) {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        @include flex-dir(row);
+        @include align-items(center);
+        height: 10%;
+        width: 100%;
+    };
+    @include e(link) {
+        @extend .flexed-nav;
+        @include fade();
+        @include underline-from-left();
+        cursor: pointer;
+        // &:hover {
+        //     background: palette(gray,dark);
+        // }
+        @include mq(medium) {
+            height: 22%;
+        }
+        @include mq(small) {
+            height: 100%;
+            width: 22%;
+        }
     }
+    @include e(logo) {
+        @extend .flexed-nav;
+        cursor:pointer;
+        background-color: palette(gray,xx-dark);
+        @include mq(medium) {
+            border-bottom: 4px solid $color-primary;
+            height: 12%;
+        }
+        @include mq(small) {
+            border-right: 4px solid $color-primary;
+            height: 100%;
+            width: 12%;
+        }
+    }
+    @include e(icon) {
+        width: 50px;
+        height: 50px;
+        margin-bottom: 0;
+    }
+}
+.bod {
     @include mq(medium) {
-      height:25%;
+        width: 93.5%;
+        float: right;
     }
     @include mq(small) {
-      height:100%;
-      width:25%;
+        width: 100%;
     }
-
-
-  }
-  @include e(icon) {
-    width:50px;
-    height:50px;
-    margin-bottom: 0;
-  }
 }
-
-.bod{
-  @include mq(medium) {
-    width: 93.5%;
-    float:right;
-  }
-  @include mq(small) {
-    width:100%;
-  }
-}
-
-.flexed-nav{
-  @extend %flexbox;
-  @include flex-dir(column);
-  @include justify-content(center);
-  @include align-items(center);
+.flexed-nav {
+    @extend %flexbox;
+    @include flex-dir(column);
+    @include justify-content(center);
+    @include align-items(center);
 }

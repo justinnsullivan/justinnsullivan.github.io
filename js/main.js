@@ -45,12 +45,14 @@ $(document).ready(function() {
 
 function revealContent(content, type) {
     if (!content.hasClass('active')) {
-        content.addClass('active');
         if (type == "general") {
+            $('.active').slideUp();
+            content.addClass('active');
             $('.content').not(content).removeClass('active');
             content.slideDown();
         }
         if (type == "school") {
+            content.addClass('active');
             $('.school').not(content).removeClass('active');
             $('.overlay-wrap').hide();
             $('.school-info').show();
