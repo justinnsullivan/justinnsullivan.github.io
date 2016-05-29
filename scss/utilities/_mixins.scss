@@ -15,17 +15,20 @@
 // Media queries
 @mixin mq($break) {
 	@if $break == "small" {
-		@media (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+		@media only screen and  (min-width: $brkpoint-sm) and (max-width: $brkpoint-md),
+		only screen and (min-device-width: $brkpoint-sm) and (max-device-width: $brkpoint-md) {
 			 @content;
 		}
 	}
 	@else if $break == "medium" {
-		@media (min-width: $brkpoint-md + 1) {
+		@media only screen and (min-width: $brkpoint-md + 1),
+		only screen and (min-device-width: $brkpoint-md + 1) {
 			 @content;
 		}
 	}
 	@else if $break == "large" {
-		@media (min-width: $brkpoint-lg) {
+		@media only screen and (min-width: $brkpoint-lg),
+		only screen and (min-device-width: $brkpoint-lg){
 			 @content;
 		}
 	}
