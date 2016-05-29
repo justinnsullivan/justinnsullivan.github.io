@@ -6,6 +6,8 @@
 
 .school {
 	cursor: pointer;
+	margin-top: em(4px);
+	margin-bottom: em(4px);
 	@include mq(large) {
 		height:100px;
 		width:100px;

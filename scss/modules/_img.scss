@@ -33,6 +33,7 @@
         }
     }
     @include m(banner) {
+      @include mq(medium) {
         margin-bottom: 4vh;
         height: 28vh;
         cursor: pointer;
@@ -42,6 +43,15 @@
             margin-bottom: 4vh;
             cursor: pointer;
         }
+      }
+      @include mq(small) {
+        padding: 2vh;
+        cursor: pointer;
+        @include m(first) {
+            padding: 2vh;
+            cursor: pointer;
+        }
+      }
     }
     @include m(conlabel) {
         display: block;

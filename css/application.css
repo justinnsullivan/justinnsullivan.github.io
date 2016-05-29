@@ -484,15 +484,23 @@ h2, .headline-secondary, .headline-secondary--grouped {
     padding-top: 1.66667em;
     padding-bottom: 1.66667em;
     margin: 0; } }
-.img--banner {
-  margin-bottom: 4vh;
-  height: 28vh;
-  cursor: pointer; }
-  .img--banner--first {
-    height: 28vh;
-    margin-top: 4vh;
+@media (min-width: 769px) {
+  .img--banner {
     margin-bottom: 4vh;
+    height: 28vh;
     cursor: pointer; }
+    .img--banner--first {
+      height: 28vh;
+      margin-top: 4vh;
+      margin-bottom: 4vh;
+      cursor: pointer; } }
+@media (min-width: 1px) and (max-width: 768px) {
+  .img--banner {
+    padding: 2vh;
+    cursor: pointer; }
+    .img--banner--first {
+      padding: 2vh;
+      cursor: pointer; } }
 .img--conlabel {
   display: block;
   padding-top: 0.83333em;
@@ -559,7 +567,9 @@ h2, .headline-secondary, .headline-secondary--grouped {
         margin-left: 20px; } }
 
 .school {
-  cursor: pointer; }
+  cursor: pointer;
+  margin-top: 0.16667em;
+  margin-bottom: 0.16667em; }
   @media (min-width: 900px) {
     .school {
       height: 100px;
@@ -981,6 +991,7 @@ h2, .headline-secondary, .headline-secondary--grouped {
   margin: 0; }
 
 .nav {
+  z-index: 100;
   height: 100vh;
   width: 6.5%;
   background-color: #d7d6d1;
@@ -1081,6 +1092,9 @@ h2, .headline-secondary, .headline-secondary--grouped {
     float: right; } }
 @media (min-width: 1px) and (max-width: 768px) {
   .bod {
+    position: absolute;
+    bottom: 0;
+    height: 90%;
     width: 100%; } }
 
 .flexed-nav, .nav__link, .nav__logo {
