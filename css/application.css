@@ -435,6 +435,7 @@ h2, .headline-secondary, .headline-secondary--grouped {
 
 [class^="btn--"] {
   padding: 15px 30px;
+  cursor: pointer;
   border: 0;
   border-radius: 0.4em;
   color: #FFFFFF;
@@ -553,6 +554,19 @@ h2, .headline-secondary, .headline-secondary--grouped {
     padding-left: 0.58333em;
     padding-right: 0.58333em;
     font-size: 20px; } }
+
+.btn--ora {
+  background-color: #ffbd5f; }
+.btn--gra {
+  background-color: #BAB8B1; }
+.btn--dar {
+  background-color: #949186; }
+.btn--tuf {
+  background-color: #a5e4ed; }
+.btn--roy {
+  background-color: #417dc0; }
+.btn--whi {
+  background-color: #FFFFFF; }
 
 [class^="btn--"] {
   margin-bottom: 1.42857em; }
@@ -1114,6 +1128,39 @@ h2, .headline-secondary, .headline-secondary--grouped {
   -webkit-align-items: center;
   -moz-align-items: center;
   align-items: center; }
+
+.morph__button {
+  position: relative;
+  display: block;
+  margin: 0 auto; }
+  .morph__button > button {
+    position: relative;
+    padding: 0 1em;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    line-height: 80px;
+    overflow: hidden;
+    z-index: 1000;
+    width: 100%;
+    height: 100%; }
+  .morph__button.open > button {
+    pointer-events: none;
+    opacity: 0;
+    -webkit-transition: opacity 0.1s;
+    transition: opacity 0.1s; }
+  .morph__button .morph__content {
+    position: fixed;
+    z-index: 900;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+    transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s; }
+  .morph__button.open .morph__content {
+    opacity: 1;
+    pointer-events: auto; }
+.morph__content {
+  pointer-events: none; }
 
 @media only screen and (min-width: 1px) and (max-width: 768px), only screen and (min-device-width: 1px) and (max-device-width: 768px) {
   .is-displayed-mobile {
