@@ -1,0 +1,29 @@
+
+.job{
+  @include e(item) {
+    font-size: 22px;
+    color: $white;
+    margin-bottom: em(8px);
+    @include mq(small) {
+
+			font-size: 18px;
+		}
+  }
+  @include e(label) {
+    font-size: 24px;
+    @include m(date) {
+      font-size: 16px;
+      font-style: italic;
+    }
+  }
+  @include e(resume) {
+    background-color: $resume;
+  }
+}
+
+[class^="job__label"] {
+  font-weight: $font-weight--light;
+  color: palette(gray, xx-dark);
+  text-align: center;
+  margin:0;
+}
